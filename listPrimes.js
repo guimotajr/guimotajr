@@ -4,7 +4,7 @@ var outfile = "prime.txt";
 
 function listPrimes (nPrimes) {
 	var primes = [];
-	for (var n=2; nPrimes > 0; n++) {
+	for (var n=2; nPrimes <= 100; n++) {
 		if (isPrime(n)) {
 			primes.push(n);
 			--nPrimes;
@@ -21,4 +21,4 @@ function isPrime(n) {
 		}
 		return true;
 }
-fs.writeFileSync (outfile, listPrimes(25));
+fs.writeFileSync (outfile, listPrimes(100));
